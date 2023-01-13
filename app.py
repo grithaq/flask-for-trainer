@@ -17,6 +17,15 @@ def semua_pendaftar():
     }
 
 
+@app.route('/tambah_peserta/<nama>')
+def tambah_peserta(nama):
+    list_pendaftar.append(nama)
+    return {
+        "message": f"List Pendaftar berhasil di update : {list_pendaftar}"
+    }
+
+
+
 
 if "__main__" == __name__:
     app.run(debug=True, port=2000)
