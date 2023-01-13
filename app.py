@@ -25,6 +25,15 @@ def tambah_peserta(nama):
     }
 
 
+@app.route("/delete/<nama>")
+def delete_peserta(nama):
+    list_pendaftar.remove(nama)
+    return {
+        "message": f"{nama} berhasil di hapus"
+    }
+
+
+
 
 
 if "__main__" == __name__:
